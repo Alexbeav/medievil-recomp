@@ -56,6 +56,7 @@ exec bash "${PACKAGER}" \
   --omit-openbios \
   --runtime-dir mods \
   --project-file CMakeLists.txt \
+  --project-file project-manifest.toml \
   --project-file game.toml \
   --project-file VERSION \
   --project-file codegen_setup.c \
