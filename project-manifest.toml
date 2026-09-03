@@ -1,0 +1,57 @@
+[project]
+title = "MediEvil"
+region = "USA"
+revision = "serial-bound source; retail revision not separately labeled"
+track = "recompilation"
+intended_audience = "player"
+commercial_use_possible = false
+representative_level = "existing aggregate package startup; full gameplay not claimed"
+
+[retail_identity]
+disc_count = 1
+serials = ["SCUS-94227"]
+executable_paths = ["disc/SCUS_942.27"]
+executable_sha256 = ""
+load_address = "0x801B0000"
+entry_point = "0x801B5CD0"
+
+[framework]
+name = "PSXRecomp"
+repository = "https://github.com/Alexbeav/psxrecomp.git"
+commit = "e081d29da2fa9862204f63e6b2004d76f1d0cb2d"
+tree = "0a8f938e950babafe2368921c5ee48eafda133f4"
+license = "See the pinned dependency license; this binding does not approve commercial use."
+
+[release_binding]
+source_commit = "41d0e90b4deafa28ee597306ea266fe54a3f9a9d"
+current_title_version = "0.1.0"
+current_public_topology = "aggregate-kit-only"
+current_public_release = "v0.2.3"
+current_package_platform = "Windows x64"
+current_package_runtime_commit = "45bbc69d33a83a847c7f24bf3ace393d45cf9353"
+current_package_ui_commit = "f867d99cca0346ebabdd707a96fe43259a24fb70"
+next_workbench_source = "e081d29da2fa9862204f63e6b2004d76f1d0cb2d"
+next_title_version = "0.1.1"
+manual_test = "pending-new-exact-package"
+linux_qualification = "pending-exact-package-and-native-test"
+macos_qualification = "pending-exact-package-and-native-test"
+publication = "preparatory-authorized-final-r4-pending"
+retcomm_submission = "not-authorized"
+
+[limits]
+maximum_local_generated_gib = 20
+maximum_single_trace_gib = 8
+
+[paths]
+local_context = ".local-context"
+generated = "generated"
+captures = "out/captures"
+traces = "out/traces"
+packages = "dist"
+
+[release]
+version = "0.1.1"
+platform = "multi-platform"
+supported_platforms = ["windows-x64", "linux-x64", "macos-arm64", "macos-x64"]
+graduation_state = "bootstrap_verified"
+public_package_status = "v0.1.1_three_platform_candidate"

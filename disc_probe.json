@@ -1,0 +1,26 @@
+{
+  "cue_name": "disc1.cue",
+  "bin_name": "disc1.bin",
+  "track_count": 2,
+  "data_track_size": 561744624,
+  "data_track_md5": "4be211c0df746cdd8c3905467eaa103e",
+  "data_track_sha1": "8536f740358f05ab15e501da41572df1eddfc1ce",
+  "boot_exe": "SCUS_942.27",
+  "serial": "SCUS-94227",
+  "serial_exe": "SCUS_942.27",
+  "volume_id": "MEDIEVIL",
+  "display_name": "MediEvil",
+  "load_address": "0x801B0000",
+  "entry_pc": "0x801B5CD0",
+  "text_size": "0x00020800",
+  "stack_base": "0x801FFFF0",
+  "require_cue": true,
+  "required_disc_fp": "12362c07e6bad7f7f650db73f82ba6b455cf1e1ef195eda057f4ce73ec4fda95",
+  "seed_count": 211,
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

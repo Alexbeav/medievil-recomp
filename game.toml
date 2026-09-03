@@ -1,0 +1,52 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "MediEvil"
+id = "SCUS-94227"
+region = "USA"
+players = 1
+exe = "disc/SCUS_942.27"
+load_address = "0x801B0000"
+entry_pc = "0x801B5CD0"
+text_size = "0x00020800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "disc1.bin"
+cue_name = "disc1.cue"
+boot_exe = "SCUS_942.27"
+known_sizes = [561744624]
+known_md5 = [
+  "4be211c0df746cdd8c3905467eaa103e",
+]
+known_sha1 = [
+  "8536f740358f05ab15e501da41572df1eddfc1ce",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+window_title = "MediEvil Recompiled"
+memcard_dir = "saves"
+bios_hle = false
+openbios = false
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 2
+required_disc_fp = "12362c07e6bad7f7f650db73f82ba6b455cf1e1ef195eda057f4ce73ec4fda95"
