@@ -70,3 +70,10 @@ The candidate targets Windows x64, Linux x64, macOS ARM64, and macOS x64. It
 requires an owned regional retail BIOS and does not ship OpenBIOS. Build-only
 CI, complete archive audit, native package tests, an exact release manifest,
 and final R4 authorization remain required. No `v0.1.1` release exists.
+
+## 2026-09-03 portable Linux package
+
+The release workflow now builds Linux in a pinned Ubuntu 20.04 container.
+The package gate rejects a setup host or emitter that needs a glibc version
+newer than 2.31. This keeps the release compatible with the qualified Rocky
+Linux 9 host. Windows and both macOS builds keep their existing runners.
